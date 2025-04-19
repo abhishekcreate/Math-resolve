@@ -1,0 +1,72 @@
+/* -------------------- ADVANCED CSS EXAMPLES -------------------- */
+
+/* -------------------- Loader Animation -------------------- */
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3; /* Light grey border */
+  border-top: 5px solid #3498db; /* Blue border on top */
+  border-radius: 50%;
+  animation: spin 2s linear infinite; /* Apply the spin animation */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* -------------------- Pulsating Circle Animation -------------------- */
+.pulsating-circle {
+  width: 100px;
+  height: 100px;
+  background-color: #007bff;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: pulsate 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulsate {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(1.2); opacity: 1; }
+}
+
+/* -------------------- Basic Responsive Grid Layout -------------------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates responsive columns */
+  gap: 20px; /* Spacing between grid items */
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* -------------------- Complex Grid Layout with Areas -------------------- */
+.complex-grid {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'sidebar content ads'
+    'footer footer footer';
+  grid-gap: 10px;
+}
+
+.header { grid-area: header; background-color: #eee; padding: 20px; }
+.sidebar { grid-area: sidebar; background-color: #ddd; padding: 20px; }
+.content { grid-area: content; background-color: #ccc; padding: 20px; }
+.ads { grid-area: ads; background-color: #bbb; padding: 20px; }
+.footer { grid-area: footer; background-color: #aaa; padding: 20px; text-align: center; }
+
+/* -------------------- Styling based on URL Fragment (:target) -------------------- */
+#section1:target {
+  background-color: lightblue;
+  border: 2px solid blue;
+}
+
+/* -------------------- Styling based on Focus Within (:focus-within) -------------------- */
+.form-group:focus-within {
+  border: 2px solid green;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+}
